@@ -17,10 +17,11 @@
                 id="search-bar"
                 type="text"
                 placeholder="Find a repository"
+                [(ngModel)]="searchTerm"
               />
             </div>
             <div class="control">
-              <a class="button is-info" onclick="searchBar()"> Search </a>
+              <a class="button is-info" (click)="searchBar()"> Search </a>
             </div>
           </div>
         </div>
@@ -36,10 +37,11 @@
               id="search-bar"
               type="text"
               placeholder="Find a repository"
+              [(ngModel)]="searchTerm"
             />
           </div>
           <div class="control">
-            <a class="button is-info" onclick="searchBar()"> Search </a>
+            <a class="button is-info" (click)="searchBar()"> Search </a>
           </div>
         </div>
       </div>

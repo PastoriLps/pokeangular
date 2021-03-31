@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { PaginationSectionComponent } from './pagination-section/pagination-section.component';
 import { CardsComponent } from './cards/cards.component';
 import { PokeApiService } from './pokeApi/poke-api.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PokeApiService } from './pokeApi/poke-api.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PokeApiService],
   bootstrap: [AppComponent]

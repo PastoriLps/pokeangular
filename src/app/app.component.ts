@@ -13,13 +13,7 @@ export class AppComponent {
   public isNextDisable: boolean;
 
   constructor(private service: PokeApiService) {
-    this.service
-      .getFirstPage()
-      .pipe(take(1))
-      .subscribe((page) => {
-        this.page = page;
-        this.checkPagination();
-      });
+    this.loadFirstPage();
   }
 
   public prevPage() {
@@ -47,7 +41,25 @@ export class AppComponent {
           this.checkPagination();
         });
     }
-    console.log('page');
+  }
+
+  public onSearch(page){
+    if (page === "") {
+      this.loadFirstPage();
+    } else {
+      this.page = page;
+      this.checkPagination();
+    }
+  }
+
+  private loadFirstPage() {
+    this.service
+    .getFirstPage()
+    .pipe(take(1))
+    .subscribe((page) => {
+      this.page = page;
+      this.checkPagination();
+    })
   }
 
   private checkPagination() {
