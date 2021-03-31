@@ -1,0 +1,30 @@
+body{
+    overflow-x: hidden;
+}
+
+.icon-logo{
+    margin-right: 2rem;
+}
+
+.column{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgba(122, 122, 122, 0.2);
+    border-radius: 0.25rem;
+    margin: 2% 2%;
+    flex: 0 0 24%;
+}
+
+@media only screen and (max-width: 768px) {
+    .pokemons-section{
+        margin: 1rem;
+    }
+
+    .pagination__section:last-of-type{
+        padding-top: 1rem;
+    }
+
+    .column, .columns{
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+}
